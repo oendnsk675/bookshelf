@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Bookshelf</h1>
+            <input type="checkbox" name="darkmode" id="darkmode" class="darkmode-input">
+            <label for="darkmode" class="darkmode-slide">
+                <div class="btn-slide">
+                </div>
+            </label>
+        </nav>
+    </header>
+    
+    <div class="container-alert hidden">
+        <div class="content">
+            <h3>Message</h3>
+            <div class="action-alert">
+                <button type="button" class="yes">Yes</button>
+                <button type="button" class="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="input-section">
+            <h1 align="center">Tambah Daftar Buku</h1>
+            <form class="form-input">
+                <input type="hidden" id="id-book">
+                <div class="input">
+                    <input id="title" type="text" value="" required name="judul" placeholder="Judul">
+                </div>
+                <div class="input">
+                    <input id="author" type="text" value="" required name="author" placeholder="Author">
+                </div>
+                <div class="input">
+                    <input id="date" type="number" value="" required name="tahun" placeholder="Tahun">
+                </div>
+                <div class="input">
+                    <label for="isComplete">Sudah dibaca : </label>
+                    <input type="checkbox" id="isComplete" name="isComplete">
+                </div>
+
+                <div class="input">
+                    <input type="submit" value="Tambah" id="btn-submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="rak-buku">
+            <div class="cari-buku">
+                <input id="pencarian" type="text" placeholder="Cari buku berdasarkan, title/author/tahun">
+            </div>
+            <div class="container-buku">
+                <div class="sudah-dibaca">    
+                    <h1 align="center">Sudah di baca</h1>
+                    <div id="completed-book-list" class="list-book">
+                    </div>
+                </div>
+                <div class="belum-dibaca">
+                    <h1 align="center">Belum di baca</h1>
+                    <div id="uncompleted-book-list" class="list-book">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/dom.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

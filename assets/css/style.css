@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --primary: #fcf4ec;
+    --secondary: #cca181;
+    --color1: #967e6c;
+    --color2: #EDCDBB;
+    --text: #141312;
+}
+
+body{
+    position: relative;
+    background-color: var(--primary);
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    transition: all 300ms ease;
+}
+
+.dark body {
+    background-color: #141312;
+}
+
+header{
+    background-color: var(--secondary);
+    padding: 18px 30px;
+    color: var(--primary);
+    box-shadow: 0px 1px 6px var(--text);
+}
+
+.dark header{
+    background-color: #cca18121;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.darkmode-slide {
+    width: 55px;
+    height: 25px;
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    position: relative;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.darkmode-input {
+    display: none;
+}
+.btn-slide {
+    position: absolute;
+    top: 3;
+    left: 3;
+    width: 22px;
+    height: 78%;
+    border-radius: 15px;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    transition: all 350ms ease;
+}
+
+.btn-slide:hover {
+    opacity: .8;
+}
+
+input.darkmode-input:checked + label.darkmode-slide div.btn-slide {
+    transform: translateX(30px);
+    background-color: var(--color1);
+    /* display: none; */
+}
+
+main {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    padding: 2rem 3.5rem;
+}
+
+form.form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section.input-section{
+    padding: 10px 20px;
+    background-color: var(--color2);
+    box-shadow: 2px 2px 6px var(--text);
+    border-radius: 15px;
+    width: 30%;
+    height: 23rem;
+}
+
+.dark section.input-section {
+    background-color: #edcdbb3b;
+}
+
+section.input-section h1:first-child {
+    margin: 20px 0px 30px 0px;
+    color: var(--text);
+    opacity: .85;
+}
+
+.dark section.input-section h1:first-child, .dark section {
+    color: #fcf4ec;
+}
+
+.dark .input input {
+    background-color: #141312;
+    color: #fcf4ec;
+}
+
+.input input{
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: var(--color2);
+    outline: none;
+    border: 2px solid var(--color1);
+    padding-left: 5px;
+    font-size: 16px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.input input[type="checkbox"] {
+    width: 10%;
+    height: 20px;
+}
+
+.input:nth-child(4) {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.input:nth-child(5) {
+    display: flex;
+    align-items: center;
+}
+
+#btn-submit, #btn-edit {
+    height: 35px;
+    width: 45%;
+    background-color: var(--primary);
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--text);
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    border: 2px solid var(--color1);
+    transition: all 300ms ease;
+    outline: none;
+}
+
+.dark #btn-submit, #btn-edit {
+    background-color: #463e39;
+    color: #fcf4ec;
+}
+
+#btn-submit:hover {
+    opacity: 75%;
+}
+
+.input:last-child {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+section.rak-buku {
+    width: 60%;
+    height: 33rem;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+section.rak-buku div.container-buku{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    height: 80%;
+}
+
+.sudah-dibaca, .belum-dibaca {
+    padding: 10px 20px;
+    background-color: var(--color2);
+    box-shadow: 2px 2px 6px var(--text);
+    border-radius: 15px;
+    width: 45%;
+    height: 100%;
+}
+
+.dark .sudah-dibaca,.dark .belum-dibaca {
+    background-color: #463e39;
+}
+
+.cari-buku input {
+    width: 100%;
+    height: 2.8rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: var(--color2);
+    outline: none;
+    padding-left: 21px;
+    font-size: 16px;
+    color: var(--text);
+    box-shadow: 2px 2px 6px var(--text);
+    font-weight: 500;
+    border: none;
+}
+
+.dark .cari-buku input {
+    background-color: #141312;
+    color: #fcf4ec;
+    border: 2px solid #fcf4ec85;
+}
+
+.dark .sudah-dibaca h1,.dark .belum-dibaca h1 {
+    opacity: .85;
+    color: #fcf4ec;
+}
+
+.list-book {
+    display: flex;
+    height: 88%;
+    border: 2px solid #14131236;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0.4rem;
+    flex-direction: column;
+    gap: 10px;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    overflow-y: auto;
+}
+
+.list-book::-webkit-scrollbar {
+    display: none;
+}
+
+article.book-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--primary);
+    height: 5.5em;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.dark article.book-item {
+    background-color: #141312;
+    color: white;
+}
+
+.book-item .book-item-left p.author{
+    margin-top: 4px;
+}
+
+.book-item .book-item-left p {
+    opacity: .85;
+}
+
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2px;
+}
+
+.check {
+    z-index: 1000;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    border: 1.5px solid #94763d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 350ms ease;
+}
+
+.dark .check {
+    fill: #fcf4ec;
+}
+
+.check:hover {
+    opacity: .35;
+}
+
+.check svg {
+    fill: #94763d;
+}
+
+.dark .check svg {
+    fill: #fcf4ec;
+}
+
+.delete, .edit {
+    position: relative;
+    z-index: 1000;
+    fill: #94763d;
+    cursor: pointer;
+    transition: opacity 350ms ease;
+}
+
+.dark .delete,.dark .edit {
+    fill: #fcf4ec;
+}
+
+.delete:hover, .edit:hover {
+    opacity: .35;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.container-alert {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 1000000;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.container-alert .content {
+    /* margin-top: -100px; */
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    color: white;
+    border: 4px solid #4e4b48;
+    border-radius: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 25%;
+    height: 30%;
+    background-color: var(--text);
+}
+
+.container-alert .content button {
+    width: 80px;
+    height: 30px;
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 250ms ease-out;
+}
+
+.container-alert .content button.yes {
+    background-color: #906d52;
+    border: 2px solid #EDCDBB;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.container-alert .content button.cancel {
+    background-color: #141312;
+    border: 2px solid #EDCDBB;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.container-alert .content button:hover {
+    opacity: .55;
+}
